@@ -1,0 +1,28 @@
+.product-container{
+    display: grid;
+    height: 600px;
+    width: 340px;
+    background-color: #222;
+    margin-bottom: 30px;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.image-container{
+    display: flex;
+    background-color: black;
+    height: 340px;
+    width: 340px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-info{
+    color: #fff;
+    margin-bottom: 150px;
+}
+
+.product-price{
+    font-size: 50px;
+}

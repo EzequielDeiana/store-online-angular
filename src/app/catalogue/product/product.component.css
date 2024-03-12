@@ -1,0 +1,40 @@
+.product-container{
+    background-color: rgb(243, 243, 243);
+}
+
+.image-container{
+    display: flex;
+    width: 430px;
+    height: 430px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.image-container img{
+    border: 3px solid black;
+}
+.product-name{
+    font-size: 78px;
+    color: #222;
+    width: fit-content;
+    border-bottom: 1px solid #111;
+}
+
+.product-price{
+    font-size: 42px;
+    width: fit-content;
+}
+
+.product-detail{
+    width: fit-content;
+    font-size: 32px;
+}
+
+.product-rating{
+    font-size: 20px;
+}
+
+.add-to-cart-btn{
+    text-align: end;
+    margin-bottom: 15px;
+}

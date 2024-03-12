@@ -1,0 +1,32 @@
+<div class="main-container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 product-container">
+      <div class="col-xs-4 col-md-4 image-container">
+        <img
+          src="{{ product.image }}"
+          alt="{{product.title}}/image"
+          height="380"
+          class="img-rounded"
+        />
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-8">
+        <div class="product-name">
+          <span>{{ product.title }}</span>
+        </div>
+        <div class="product-rating">
+          <span>Rate: {{ product.rating.rate }} </span>
+          <span>Count: {{ product.rating.count }} </span>
+        </div>
+        <div class="product-price">
+          <span>${{ product.price }}</span>
+        </div>
+        <div class="product-detail">
+          <p>
+            {{product.description}}
+          </p>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
