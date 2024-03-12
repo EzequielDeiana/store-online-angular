@@ -24,4 +24,8 @@ export class CatalogueComponent implements OnInit {
     .catch(err => {console.error(err);})
   }
 
+  redirectToProduct(id: number){
+    this._router.navigate(['product', id]);
+  }
+
 }
