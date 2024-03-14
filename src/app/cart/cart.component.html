@@ -1,1 +1,11 @@
-<p>cart works!</p>
+<div class="main-container">
+  <h1>Sarasa</h1>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 product-container">
+      <div *ngFor="let product of cartsProducts">
+        <div>{{ product.title }}</div>
+        <!-- Muestra otras propiedades del producto según sea necesario -->
+      </div>
+    </div>
+  </div>
+</div>

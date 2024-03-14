@@ -1,5 +1,7 @@
-export interface ICartItem{
+import { IProduct } from "./product";
+
+export interface ICart {
     id: number;
-    productId: number;
+    product: IProduct; // Incluir todos los detalles del producto
     quantity: number;
-}
+  }

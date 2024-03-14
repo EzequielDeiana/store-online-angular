@@ -19,9 +19,9 @@ export class CatalogueComponent implements OnInit {
   }
 
   getCatalogue(){
-    this._catalogueService.getProducts()
-    .then(products => {this.products = products; console.log(products)})
-    .catch(err => {console.error(err);})
+    this._catalogueService.getProductsPromise()
+      .then(products => {this.products = products; console.log(products)})
+      .catch(err => {console.error(err);})
   }
 
   redirectToProduct(id: number){

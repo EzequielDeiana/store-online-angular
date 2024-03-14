@@ -18,4 +18,8 @@ export class NavbarComponent implements OnInit {
     this._router.navigate(['catalogue']);
   }
 
+  redirectToCart(){
+    this._router.navigate(['cart']);
+  }
+
 }
