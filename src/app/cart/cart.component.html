@@ -1,11 +1,30 @@
-<div class="main-container">
-  <h1>Sarasa</h1>
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 product-container">
-      <div *ngFor="let product of cartsProducts">
-        <div>{{ product.title }}</div>
-        <!-- Muestra otras propiedades del producto según sea necesario -->
+<div class="container">
+  <h2>Carrito de Compras</h2>
+  <div *ngIf="currentUser">
+    <div>
+      <h3>Datos del Usuario</h3>
+      <p>
+        Nombre: {{ currentUser.name.firstname }} {{ currentUser.name.lastname }}
+      </p>
+      <p>Correo Electrónico: {{ currentUser.email }}</p>
+      <p>Teléfono: {{ currentUser.phone }}</p>
+      <p>
+        Dirección: {{ currentUser.address.street }},
+        {{ currentUser.address.number }}, {{ currentUser.address.city }},
+        {{ currentUser.address.zipcode }}
+      </p>
+    </div>
+    <hr />
+  </div>
+  <div *ngIf="cartProducts && cartProducts.length > 0">
+    <h3>Productos en el Carrito</h3>
+    <div *ngFor="let product of cartProducts">
+      <div>
+        <img [src]="product.image" alt="{{ product.title }}" width="100">
+        <h4>{{ product.title }}</h4>
+        <p>Precio: ${{ product.price }}</p>
+        <!-- Agrega más detalles del producto según sea necesario -->
       </div>
+      <hr>
     </div>
   </div>
-</div>

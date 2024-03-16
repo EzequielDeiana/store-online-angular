@@ -37,20 +37,19 @@ export class ProductComponent implements OnInit {
       );
   }
 
-  addToCart(product: IProduct, quantity: number): void {
-    const cartItem: ICart = {
-      id: product.id, // Usar el ID del producto
-      product: product,
-      quantity: quantity
-    };
-    this._cartService.addToCart(cartItem)
+  addToCart(productId: number, quantity: number): void {
+    this._cartService.addToCart(productId, quantity)
       .subscribe(
         response => {
           console.log('Producto agregado al carrito:', response);
+          // Aquí puedes manejar cualquier lógica adicional después de agregar el producto al carrito, como actualizar la lista de productos en el carrito.
         },
         error => {
           console.error('Error al agregar producto al carrito:', error);
         }
       );
   }
+  
+
+
 }

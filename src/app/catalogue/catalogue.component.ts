@@ -20,7 +20,7 @@ export class CatalogueComponent implements OnInit {
 
   getCatalogue(){
     this._catalogueService.getProductsPromise()
-      .then(products => {this.products = products; console.log(products)})
+      .then(products => {this.products = products})
       .catch(err => {console.error(err);})
   }
 
